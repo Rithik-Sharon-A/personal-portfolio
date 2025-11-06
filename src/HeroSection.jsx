@@ -1,20 +1,74 @@
 // src/HeroSection.jsx
 
 import React from 'react';
-import './HeroSection.css';
+import bgImage from './assets/bg.png';
 
 function HeroSection() {
+  const handleResumeDownload = async () => {
+    try {
+      const response = await fetch('/Rithik_Sharon_Resume.pdf');
+      if (!response.ok) throw new Error('Resume not found');
+      
+      const blob = await response.blob();
+      const url = window.URL.createObjectURL(blob);
+      const link = document.createElement('a');
+      link.href = url;
+      link.download = 'Rithik_Sharon_Resume.pdf';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      window.URL.revokeObjectURL(url);
+    } catch (error) {
+      console.error('Resume download failed:', error);
+      // Fallback to direct link
+      window.open('/Rithik_Sharon_Resume.pdf', '_blank');
+    }
+  };
+
   return (
-    <section id="home" className="hero-section">
-      <div className="hero-content">
-        <h1 className="hero-name">RITHIK</h1>
-        <h1 className="hero-name-bold">SHARON A</h1>
-        <p className="hero-subtitle">
+    <section 
+      id="home" 
+      className="vh-100 d-flex justify-content-center align-items-center text-center text-white position-relative"
+      style={{
+        backgroundImage: `url(${bgImage})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat'
+      }}
+    >
+      {/* Overlay for text readability */}
+      <div className="position-absolute top-0 start-0 w-100 h-100" style={{backgroundColor: 'rgba(0, 0, 0, 0.5)'}}></div>
+      
+      {/* Hero Content */}
+      <div className="position-relative" style={{zIndex: 10}}>
+        <h1 className="display-1 fw-light mb-0" style={{letterSpacing: '0.1em'}}>
+          RITHIK
+        </h1>
+        <h1 className="display-1 fw-bold mb-0" style={{letterSpacing: '0.1em'}}>
+          SHARON A
+        </h1>
+        <p className="fs-3 fw-light mt-3" style={{letterSpacing: '0.4em'}}>
           Full Stack Developer
         </p>
-        <a href="#resume" className="hero-cta">
-          Resume
-        </a>
+        <button 
+          onClick={handleResumeDownload}
+          className="btn btn-outline-light btn-lg mt-4 px-4 py-3 text-decoration-none"
+          style={{
+            border: '2px solid white',
+            background: 'transparent',
+            transition: 'all 0.3s ease'
+          }}
+          onMouseEnter={(e) => {
+            e.target.style.background = 'white';
+            e.target.style.color = 'black';
+          }}
+          onMouseLeave={(e) => {
+            e.target.style.background = 'transparent';
+            e.target.style.color = 'white';
+          }}
+        >
+          Download Resume
+        </button>
       </div>
     </section>
   );

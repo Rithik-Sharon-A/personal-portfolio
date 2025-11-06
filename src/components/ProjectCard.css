@@ -1,0 +1,65 @@
+/* src/components/ProjectCard.css */
+
+.project-card {
+  background: linear-gradient(135deg, var(--background-color) 0%, var(--secondary-bg) 100%);
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(124, 58, 237, 0.3) !important;
+  box-shadow: 0 15px 45px rgba(124, 58, 237, 0.2);
+  transition: all 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(124, 58, 237, 0.5) !important;
+  box-shadow: 0 15px 45px rgba(124, 58, 237, 0.3);
+}
+
+.featured-indicator {
+  height: 4px;
+  background: linear-gradient(135deg, var(--accent-color), #ff6b6b);
+}
+
+.project-icon {
+  font-size: 3rem;
+  background: linear-gradient(135deg, var(--accent-color), #ff6b6b);
+}
+
+.project-card:not(.featured) .project-icon {
+  font-size: 2.5rem;
+}
+
+.tech-badge {
+  background: rgba(124, 58, 237, 0.15);
+  color: var(--accent-color);
+  border: 1px solid rgba(124, 58, 237, 0.3);
+  transition: all 0.3s ease;
+}
+
+.tech-badge:hover {
+  background: rgba(124, 58, 237, 0.25);
+  color: var(--accent-color);
+  border-color: var(--accent-color);
+  transform: scale(1.05);
+}
+
+.btn-github {
+  transition: all 0.3s ease;
+}
+
+.btn-github:hover {
+  background: #333 !important;
+  color: white !important;
+  transform: translateY(-2px);
+}
+
+.btn-live {
+  background: linear-gradient(135deg, var(--accent-color), #ff6b6b);
+  color: white;
+  border: 1px solid var(--accent-color);
+  transition: all 0.3s ease;
+}
+
+.btn-live:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(100, 108, 255, 0.3);
+}

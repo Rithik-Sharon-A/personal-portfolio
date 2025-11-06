@@ -1,0 +1,40 @@
+/* src/components/SectionHeader.css */
+
+.section-header {
+  animation: fadeIn 0.6s ease-in;
+}
+
+.section-title {
+  color: var(--text-color);
+}
+
+.section-header.text-center .section-underline {
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+}
+
+.section-header:not(.text-center) .section-underline {
+  left: 0;
+  width: 60px;
+}
+
+.section-underline {
+  height: 4px;
+  background: linear-gradient(90deg, var(--accent-color), #4285f4);
+}
+
+.section-subtitle {
+  max-width: 600px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

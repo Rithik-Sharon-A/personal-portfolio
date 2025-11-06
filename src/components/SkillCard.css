@@ -1,0 +1,15 @@
+/* src/components/SkillCard.css */
+
+.skill-card {
+  background: linear-gradient(135deg, var(--background-color) 0%, var(--secondary-bg) 100%);
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(124, 58, 237, 0.3) !important;
+  box-shadow: 0 15px 35px rgba(124, 58, 237, 0.2);
+  transition: all 0.3s ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(124, 58, 237, 0.5) !important;
+  box-shadow: 0 15px 35px rgba(124, 58, 237, 0.3);
+}

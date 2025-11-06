@@ -1,11 +1,17 @@
+/* Import Bootstrap CSS */
+@import 'bootstrap/dist/css/bootstrap.min.css';
+
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
-  /* Remove hardcoded colors - let App.jsx control them */
-  --background-color: #f5f5f5;
-  --text-color: #333333;
+  /* Dark Purple Theme CSS Variables */
+  --background-color: #0f0f23;
+  --text-color: #e0e0e0;
+  --secondary-bg: #1a1a2e;
+  --accent-color: #7c3aed;
+  --navbar-bg: linear-gradient(135deg, rgba(15, 15, 35, 0.95) 0%, rgba(26, 26, 46, 0.95) 100%);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -13,7 +19,71 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* No transitions for instant theme switching */
+
+/* Custom animations for chatbot */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+@keyframes bounce {
+  0%, 80%, 100% {
+    transform: scale(0);
+  }
+  40% {
+    transform: scale(1);
+  }
+}
+
+/* Mobile Navigation Styles */
+@media (max-width: 991.98px) {
+  .navbar-collapse {
+    background: rgba(15, 15, 35, 0.95);
+    backdrop-filter: blur(20px);
+    border-radius: 12px;
+    margin-top: 8px;
+    padding: 16px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .navbar-nav {
+    text-align: center;
+  }
+  
+  .nav-item {
+    margin: 4px 0;
+  }
+  
+  .nav-link {
+    padding: 12px 16px !important;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+  }
+  
+  .nav-link:hover {
+    background-color: rgba(100, 108, 255, 0.1) !important;
+    color: var(--accent-color) !important;
+  }
+}
+
+/* Hamburger animation */
+.navbar-toggler[aria-expanded="true"] .hamburger-icon span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.navbar-toggler[aria-expanded="true"] .hamburger-icon span:nth-child(2) {
+  opacity: 0;
+}
+
+.navbar-toggler[aria-expanded="true"] .hamburger-icon span:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -6px);
+}
 
 a {
   font-weight: 500;
@@ -58,6 +128,7 @@ button:focus-visible {
 /* Smooth scrolling for navigation */
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 80px; /* Account for fixed navbar height */
 }
 
 body {

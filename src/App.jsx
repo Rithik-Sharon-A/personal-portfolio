@@ -7,7 +7,6 @@ import HeroSection from './HeroSection';
 import About from './About';
 import Projects from './Projects';
 import Contact from './Contact';
-import ChatbotPlaceholder from './chatbot/ChatbotPlaceholder';
 
 import './index.css';
 
@@ -20,7 +19,6 @@ function App() {
         <About />
         <Projects />
         <Contact />
-        <ChatbotPlaceholder />
       </div>
     </ErrorBoundary>
   );

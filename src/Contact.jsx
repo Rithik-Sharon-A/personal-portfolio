@@ -128,8 +128,8 @@ function Contact() {
                 <div className="text-center contact-info-card">
                   <div className="contact-icon mb-3">📧</div>
                   <h5 style={{color: 'var(--text-color)'}}>Email</h5>
-                  <a href="mailto:your.email@example.com" style={{color: 'var(--accent-color)', textDecoration: 'none'}}>
-                    your.email@example.com
+                  <a href="mailto:rithiksharon.a@gmail.com" style={{color: 'var(--accent-color)', textDecoration: 'none'}}>
+                  rithiksharon.a@gmail.com
                   </a>
                 </div>
               </div>
@@ -137,17 +137,17 @@ function Contact() {
                 <div className="text-center contact-info-card">
                   <div className="contact-icon mb-3">💼</div>
                   <h5 style={{color: 'var(--text-color)'}}>LinkedIn</h5>
-                  <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer" style={{color: 'var(--accent-color)', textDecoration: 'none'}}>
-                    Connect with me
+                  <a href="https://www.linkedin.com/in/rithik-sharon/" target="_blank" rel="noopener noreferrer" style={{color: 'var(--accent-color)', textDecoration: 'none'}}>
+                    Rithik Sharon A
                   </a>
                 </div>
               </div>
               <div className="col-md-4">
                 <div className="text-center contact-info-card">
-                  <div className="contact-icon mb-3">🐙</div>
+                  <div className="contact-icon mb-3">💻</div>
                   <h5 style={{color: 'var(--text-color)'}}>GitHub</h5>
-                  <a href="https://github.com/ececoderithik" target="_blank" rel="noopener noreferrer" style={{color: 'var(--accent-color)', textDecoration: 'none'}}>
-                    @ececoderithik
+                  <a href="https://github.com/Rithik-Sharon-A" target="_blank" rel="noopener noreferrer" style={{color: 'var(--accent-color)', textDecoration: 'none'}}>
+                    @Rithik-Sharon-A
                   </a>
                 </div>
               </div>

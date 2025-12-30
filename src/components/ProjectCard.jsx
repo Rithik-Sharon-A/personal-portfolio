@@ -45,17 +45,19 @@ function ProjectCard({ project, featured = false }) {
             rel="noopener noreferrer"
           >
             <span>📁</span>
-            Code
+            View Code
           </a>
-          <a 
-            href={project.live} 
-            className={`btn-live btn ${featured ? '' : 'btn-sm'} d-flex align-items-center ${featured ? 'gap-2' : 'justify-content-center gap-2'}`}
-            target="_blank" 
-            rel="noopener noreferrer"
-          >
-            <span>🌐</span>
-            Live Demo
-          </a>
+          {project.live && project.live !== '#' && (
+            <a 
+              href={project.live} 
+              className={`btn-live btn ${featured ? '' : 'btn-sm'} d-flex align-items-center ${featured ? 'gap-2' : 'justify-content-center gap-2'}`}
+              target="_blank" 
+              rel="noopener noreferrer"
+            >
+              <span>🌐</span>
+              Live Demo
+            </a>
+          )}
         </div>
       </div>
     </div>
@@ -70,7 +72,7 @@ ProjectCard.propTypes = {
     technologies: PropTypes.arrayOf(PropTypes.string).isRequired,
     image: PropTypes.string.isRequired,
     github: PropTypes.string.isRequired,
-    live: PropTypes.string.isRequired,
+    live: PropTypes.string,
   }).isRequired,
   featured: PropTypes.bool,
 };

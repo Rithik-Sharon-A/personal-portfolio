@@ -6,14 +6,14 @@ import bgImage from './assets/bg.png';
 function HeroSection() {
   const handleResumeDownload = async () => {
     try {
-      const response = await fetch('/Rithik_Sharon_Resume.pdf');
+      const response = await fetch('/Rithik Sharon A.pdf');
       if (!response.ok) throw new Error('Resume not found');
       
       const blob = await response.blob();
       const url = window.URL.createObjectURL(blob);
       const link = document.createElement('a');
       link.href = url;
-      link.download = 'Rithik_Sharon_Resume.pdf';
+      link.download = 'Rithik_Sharon_A_Resume.pdf';
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
@@ -21,7 +21,7 @@ function HeroSection() {
     } catch (error) {
       console.error('Resume download failed:', error);
       // Fallback to direct link
-      window.open('/Rithik_Sharon_Resume.pdf', '_blank');
+      window.open('/Rithik Sharon A.pdf', '_blank');
     }
   };
 
@@ -48,7 +48,7 @@ function HeroSection() {
           SHARON A
         </h1>
         <p className="fs-3 fw-light mt-3" style={{letterSpacing: '0.4em'}}>
-          Full Stack Developer
+          MERN Stack Developer
         </p>
         <button 
           onClick={handleResumeDownload}

@@ -7,6 +7,7 @@ import HeroSection from './HeroSection';
 import About from './About';
 import Projects from './Projects';
 import Contact from './Contact';
+import Footer from './components/Footer';
 
 import './index.css';
 
@@ -19,6 +20,7 @@ function App() {
         <About />
         <Projects />
         <Contact />
+        <Footer />
       </div>
     </ErrorBoundary>
   );

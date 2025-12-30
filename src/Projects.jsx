@@ -12,7 +12,7 @@ function Projects() {
       description: "A modern, responsive portfolio website showcasing projects, skills, and professional experience with smooth animations.",
       technologies: ["React", "CSS3", "Framer Motion", "Vite"],
       image: "💼",
-      github: "https://github.com/ececoderithik/personal-blog.git",  // Update with your actual repo name
+      github: "https://github.com/Rithik-Sharon-A/personal-blog",
       live: "#",
       featured: true
     },
@@ -22,7 +22,7 @@ function Projects() {
       description: "Build and deploy your own Agent to represent you to potential future employers. An AI-powered digital representation that showcases your skills and experience.",
       technologies: ["AI/ML", "Python", "OpenAI", "Agent Framework"],
       image: "🤖",
-      github: "https://github.com/ececoderithik/career-digital-twin",  // Update with your actual repo name
+      github: "https://github.com/Rithik-Sharon-A/career-digital-twin",
       live: "#",
       featured: true
     }
@@ -219,7 +219,7 @@ function Projects() {
                 Interested in seeing more of my work? Check out my GitHub profile for additional projects and contributions.
               </p>
               <a 
-                href="https://github.com/ececoderithik" 
+                href="https://github.com/Rithik-Sharon-A" 
                 className="btn btn-lg d-inline-flex align-items-center gap-3"
                 target="_blank" 
                 rel="noopener noreferrer"

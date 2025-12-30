@@ -8,7 +8,7 @@ function About() {
   const skillsData = [
     { title: 'Frontend', skills: ['React', 'Next.js', 'JavaScript', 'HTML/CSS', 'Redux'] },
     { title: 'Backend', skills: ['Node.js', 'Express', 'MongoDB', 'REST APIs'] },
-    { title: 'Tools', skills: ['Git', 'Vite', 'VS Code', 'Cursor AI'] }
+    { title: 'AI & Tools', skills: ['Agentic AI', 'OpenAI API', 'Git', 'Vite', 'Cursor AI'] }
   ];
   return (
     <section 
@@ -50,9 +50,9 @@ function About() {
             />
             
             <p className="fs-5 mb-4 text-center" style={{color: 'var(--text-color)', opacity: 0.9, lineHeight: 1.8}}>
-              I'm Rithik Sharon A, a passionate Full Stack Developer with a love for creating 
-              innovative web solutions. I enjoy working with modern technologies and building 
-              applications that make a difference.
+              MERN Stack Developer with a strong foundation in building scalable, responsive web 
+              applications using React, Node.js, Express, and MongoDB. Specializing in Agentic AI and 
+              OpenAI APIs to automate complex workflows and improve user experiences.
             </p>
             
             <p className="fs-5 mb-5 text-center" style={{color: 'var(--text-color)', opacity: 0.9, lineHeight: 1.8}}>

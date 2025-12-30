@@ -1,0 +1,47 @@
+═══════════════════════════════════════════════════════════════
+                    📧 EMAILJS QUICK SETUP
+═══════════════════════════════════════════════════════════════
+
+🔗 STEP 1: Sign up at https://www.emailjs.com/
+
+📧 STEP 2: Connect Gmail (rithiksharon.a@gmail.com)
+   → Email Services → Add New Service → Gmail
+
+📝 STEP 3: Create Email Template
+   Subject: New Contact Form Message from {{from_name}}
+   
+   Template:
+   ─────────────────────────────────────────────────────────────
+   From: {{from_name}}
+   Email: {{from_email}}
+   
+   Message:
+   {{message}}
+   ─────────────────────────────────────────────────────────────
+   
+   To Email: rithiksharon.a@gmail.com
+
+🔑 STEP 4: Copy these 3 credentials:
+   ✓ Service ID (from Email Services)
+   ✓ Template ID (from Email Templates)
+   ✓ Public Key (from Account → General)
+
+💻 STEP 5: Update src/Contact.jsx (lines 27-29)
+   Replace:
+   - YOUR_SERVICE_ID
+   - YOUR_TEMPLATE_ID  
+   - YOUR_PUBLIC_KEY
+
+✅ STEP 6: Test it!
+   npm run dev → Fill contact form → Check email
+
+═══════════════════════════════════════════════════════════════
+                     📄 FULL GUIDE
+═══════════════════════════════════════════════════════════════
+See EMAILJS_SETUP.md for detailed instructions
+
+Free Plan: 200 emails/month
+
+
+
+

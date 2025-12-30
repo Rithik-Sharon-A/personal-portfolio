@@ -1,6 +1,7 @@
 // src/Contact.jsx
 
 import React, { useState } from 'react';
+import emailjs from '@emailjs/browser';
 import SectionHeader from './components/SectionHeader';
 import './Contact.css';
 
@@ -11,6 +12,7 @@ function Contact() {
     message: ''
   });
   const [status, setStatus] = useState('');
+  const [errorMessage, setErrorMessage] = useState('');
 
   const handleChange = (e) => {
     setFormData({
@@ -22,15 +24,39 @@ function Contact() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setStatus('sending');
+    setErrorMessage('');
     
-    // Simulate form submission - replace with actual API call
-    setTimeout(() => {
-      console.log('Form submitted:', formData);
+    // EmailJS Configuration - Replace these with your actual EmailJS credentials
+    const serviceId = 'service_lby321k';
+    const templateId = 'template_gt1of23';
+    const publicKey = 'MXL3_m2VBE-p1sWFa';
+    
+    // Template parameters that match your EmailJS template
+    const templateParams = {
+      from_name: formData.name,
+      from_email: formData.email,
+      message: formData.message,
+      to_name: 'Rithik Sharon A',
+    };
+    
+    try {
+      await emailjs.send(serviceId, templateId, templateParams, publicKey);
       setStatus('success');
       setFormData({ name: '', email: '', message: '' });
       
-      setTimeout(() => setStatus(''), 3000);
-    }, 1000);
+      // Clear success message after 5 seconds
+      setTimeout(() => setStatus(''), 5000);
+    } catch (error) {
+      console.error('Email sending failed:', error);
+      setStatus('error');
+      setErrorMessage('Failed to send message. Please try again or email me directly at rithiksharon.a@gmail.com');
+      
+      // Clear error message after 7 seconds
+      setTimeout(() => {
+        setStatus('');
+        setErrorMessage('');
+      }, 7000);
+    }
   };
 
   return (
@@ -115,7 +141,13 @@ function Contact() {
 
                   {status === 'success' && (
                     <div className="alert alert-success mt-3 mb-0" role="alert">
-                      Message sent successfully! I'll get back to you soon.
+                      ✅ Message sent successfully! I'll get back to you soon.
+                    </div>
+                  )}
+                  
+                  {status === 'error' && (
+                    <div className="alert alert-danger mt-3 mb-0" role="alert">
+                      ❌ {errorMessage}
                     </div>
                   )}
                 </form>

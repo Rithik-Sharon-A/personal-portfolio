@@ -28,7 +28,7 @@ function Contact() {
     
     // EmailJS Configuration - Replace these with your actual EmailJS credentials
     const serviceId = 'service_lby321k';
-    const templateId = 'template_gt1of23';
+    const templateId = 'template_emr9qek';
     const publicKey = 'MXL3_m2VBE-p1sWFa';
     
     // Template parameters that match your EmailJS template
@@ -141,13 +141,13 @@ function Contact() {
 
                   {status === 'success' && (
                     <div className="alert alert-success mt-3 mb-0" role="alert">
-                      ✅ Message sent successfully! I'll get back to you soon.
+                      Message sent successfully! I'll get back to you soon.
                     </div>
                   )}
                   
                   {status === 'error' && (
                     <div className="alert alert-danger mt-3 mb-0" role="alert">
-                      ❌ {errorMessage}
+                      Error: {errorMessage}
                     </div>
                   )}
                 </form>
@@ -158,7 +158,7 @@ function Contact() {
             <div className="row mt-5 g-4">
               <div className="col-md-4">
                 <div className="text-center contact-info-card">
-                  <div className="contact-icon mb-3">📧</div>
+                  <div className="contact-icon mb-3">@</div>
                   <h5 style={{color: 'var(--text-color)'}}>Email</h5>
                   <a href="mailto:rithiksharon.a@gmail.com" style={{color: 'var(--accent-color)', textDecoration: 'none'}}>
                   rithiksharon.a@gmail.com
@@ -167,7 +167,7 @@ function Contact() {
               </div>
               <div className="col-md-4">
                 <div className="text-center contact-info-card">
-                  <div className="contact-icon mb-3">💼</div>
+                  <div className="contact-icon mb-3">in</div>
                   <h5 style={{color: 'var(--text-color)'}}>LinkedIn</h5>
                   <a href="https://www.linkedin.com/in/rithik-sharon/" target="_blank" rel="noopener noreferrer" style={{color: 'var(--accent-color)', textDecoration: 'none'}}>
                     Rithik Sharon A
@@ -176,7 +176,7 @@ function Contact() {
               </div>
               <div className="col-md-4">
                 <div className="text-center contact-info-card">
-                  <div className="contact-icon mb-3">💻</div>
+                  <div className="contact-icon mb-3">{'<>'}</div>
                   <h5 style={{color: 'var(--text-color)'}}>GitHub</h5>
                   <a href="https://github.com/Rithik-Sharon-A" target="_blank" rel="noopener noreferrer" style={{color: 'var(--accent-color)', textDecoration: 'none'}}>
                     @Rithik-Sharon-A
@@ -192,4 +192,5 @@ function Contact() {
 }
 
 export default Contact;
+
 

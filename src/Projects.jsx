@@ -22,7 +22,7 @@ function Projects() {
       description: "Build and deploy your own Agent to represent you to potential future employers. An AI-powered digital representation that showcases your skills and experience.",
       technologies: ["AI/ML", "Python", "OpenAI", "Agent Framework"],
       image: "🤖",
-      github: "https://github.com/Rithik-Sharon-A/career-digital-twin",
+      github: "https://github.com/Rithik-Sharon-A/career-digital-twin-",
       live: "#",
       featured: true
     }

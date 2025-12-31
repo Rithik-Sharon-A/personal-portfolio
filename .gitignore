@@ -13,6 +13,9 @@ dist-ssr
 *.local
 .env
 
+# Chatbot API Configuration (contains sensitive keys)
+src/utils/chatbot-config.js
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json

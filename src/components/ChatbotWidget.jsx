@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+﻿import React, { useState, useEffect, useRef } from 'react';
 import './ChatbotWidget.css';
 
 const ChatbotWidget = () => {
@@ -16,10 +16,10 @@ const ChatbotWidget = () => {
   const messagesEndRef = useRef(null);
 
   const quickQuestions = [
-    { text: '💻 Technical Skills', question: 'What are your technical skills?' },
-    { text: '🤖 AI Experience', question: 'Tell me about your AI experience' },
-    { text: '🚀 Projects', question: 'What projects have you built?' },
-    { text: '📧 Contact Info', question: 'How can I contact you?' }
+    { text: 'ðŸ’» Technical Skills', question: 'What are your technical skills?' },
+    { text: 'ðŸ¤– AI Experience', question: 'Tell me about your AI experience' },
+    { text: 'ðŸš€ Projects', question: 'What projects have you built?' },
+    { text: 'ðŸ“§ Contact Info', question: 'How can I contact you?' }
   ];
 
   const scrollToBottom = () => {
@@ -32,7 +32,7 @@ const ChatbotWidget = () => {
 
   const getAIResponse = async (userMessage) => {
     // Get API URL from environment or use default
-    const apiUrl = import.meta.env.VITE_API_URL || 'http://localhost:5000';
+    const apiUrl = import.meta.env.VITE_API_URL || 'https://career-digital-twin.onrender.com';
     
     try {
       const response = await fetch(`${apiUrl}/api/chat`, {
@@ -150,7 +150,7 @@ const ChatbotWidget = () => {
         onClick={() => setIsOpen(!isOpen)}
         aria-label="Toggle chat"
       >
-        {isOpen ? '✕' : '🤖'}
+        {isOpen ? 'âœ•' : 'ðŸ¤–'}
       </button>
 
       {/* Chat Window */}
@@ -159,7 +159,7 @@ const ChatbotWidget = () => {
           {/* Header */}
           <div className="chatbot-header">
             <div className="chatbot-header-content">
-              <div className="chatbot-avatar">🤖</div>
+              <div className="chatbot-avatar">ðŸ¤–</div>
               <div>
                 <h3>Rithik's AI Twin</h3>
                 <p className="chatbot-status">
@@ -168,14 +168,14 @@ const ChatbotWidget = () => {
                 </p>
               </div>
             </div>
-            <button onClick={() => setIsOpen(false)} className="chatbot-close">✕</button>
+            <button onClick={() => setIsOpen(false)} className="chatbot-close">âœ•</button>
           </div>
 
           {/* Messages */}
           <div className="chatbot-messages">
             {messages.map((msg, index) => (
               <div key={index} className={`chatbot-message ${msg.type}`}>
-                <div className="message-avatar">{msg.type === 'user' ? '👤' : '🤖'}</div>
+                <div className="message-avatar">{msg.type === 'user' ? 'ðŸ‘¤' : 'ðŸ¤–'}</div>
                 <div className="message-content">
                   <p>{msg.text}</p>
                   <span className="message-time">{msg.time}</span>
@@ -204,7 +204,7 @@ const ChatbotWidget = () => {
             {/* Typing Indicator */}
             {isTyping && (
               <div className="typing-indicator">
-                <div className="message-avatar">🤖</div>
+                <div className="message-avatar">ðŸ¤–</div>
                 <div className="typing-dots">
                   <span></span>
                   <span></span>
@@ -227,7 +227,7 @@ const ChatbotWidget = () => {
               disabled={isTyping}
             />
             <button onClick={handleSend} disabled={isTyping || !inputValue.trim()}>
-              ➤
+              âž¤
             </button>
           </div>
         </div>
@@ -237,4 +237,5 @@ const ChatbotWidget = () => {
 };
 
 export default ChatbotWidget;
+
 

@@ -29,9 +29,7 @@ function Navbar() {
                  height: '32px',
                  background: 'linear-gradient(135deg, var(--accent-color), #ff6b6b)',
                  boxShadow: '0 2px 8px rgba(124, 58, 237, 0.3)'
-               }}>
-            💻
-          </div>
+               }}>RS</div>
           <span style={{
             background: 'linear-gradient(135deg, var(--accent-color), #ff6b6b)',
             WebkitBackgroundClip: 'text',

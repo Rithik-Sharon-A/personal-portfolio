@@ -67,3 +67,10 @@
   color: var(--text-color);
 }
 
+
+
+@media (max-width: 576px) {
+  .contact-section { padding-top: 3rem; padding-bottom: 3rem; }
+  .contact-info-card { padding: 1.25rem; }
+  .contact-icon { font-size: 2rem; }
+}

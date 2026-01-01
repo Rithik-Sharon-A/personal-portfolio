@@ -28,7 +28,7 @@ function HeroSection() {
   return (
     <section 
       id="home" 
-      className="vh-100 d-flex justify-content-center align-items-center text-center text-white position-relative"
+      className="hero-section d-flex justify-content-center align-items-center text-center text-white position-relative"
       style={{
         backgroundImage: `url(${bgImage})`,
         backgroundSize: 'cover',
@@ -40,19 +40,19 @@ function HeroSection() {
       <div className="position-absolute top-0 start-0 w-100 h-100" style={{backgroundColor: 'rgba(0, 0, 0, 0.5)'}}></div>
       
       {/* Hero Content */}
-      <div className="position-relative" style={{zIndex: 10}}>
-        <h1 className="display-1 fw-light mb-0" style={{letterSpacing: '0.1em'}}>
+      <div className="position-relative hero-content" style={{zIndex: 10}}>
+        <h1 className="display-1 fw-light mb-0 hero-name hero-name--light">
           RITHIK
         </h1>
-        <h1 className="display-1 fw-bold mb-0" style={{letterSpacing: '0.1em'}}>
+        <h1 className="display-1 fw-bold mb-0 hero-name hero-name--bold">
           SHARON A
         </h1>
-        <p className="fs-3 fw-light mt-3" style={{letterSpacing: '0.4em'}}>
+        <p className="fs-3 fw-light mt-3 hero-role">
           MERN Stack Developer
         </p>
         <button 
           onClick={handleResumeDownload}
-          className="btn btn-outline-light btn-lg mt-4 px-4 py-3 text-decoration-none"
+          className="btn btn-outline-light btn-lg mt-4 px-4 py-3 text-decoration-none hero-cta"
           style={{
             border: '2px solid white',
             background: 'transparent',

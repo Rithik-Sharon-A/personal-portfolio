@@ -9,7 +9,7 @@ class ErrorBoundary extends React.Component {
     this.state = { hasError: false, error: null, errorInfo: null };
   }
 
-  static getDerivedStateFromError(error) {
+  static getDerivedStateFromError() {
     return { hasError: true };
   }
 
@@ -35,12 +35,12 @@ class ErrorBoundary extends React.Component {
           color: 'var(--text-color)'
         }}>
           <div className="text-center" style={{maxWidth: '600px'}}>
-            <h1 className="display-1 mb-4">😕</h1>
+            <h1 className="display-1 mb-4">!</h1>
             <h2 className="h2 mb-3">Oops! Something went wrong</h2>
             <p className="lead mb-4" style={{opacity: 0.8}}>
               We're sorry for the inconvenience. The application encountered an unexpected error.
             </p>
-            {process.env.NODE_ENV === 'development' && this.state.error && (
+            {import.meta.env.DEV && this.state.error && (
               <details className="text-start p-3 rounded" style={{
                 background: 'var(--secondary-bg)',
                 border: '1px solid rgba(100, 108, 255, 0.2)',

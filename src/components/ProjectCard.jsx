@@ -12,9 +12,9 @@ function ProjectCard({ project, featured = false }) {
         <div className="featured-indicator position-absolute top-0 start-0 w-100"></div>
       )}
       
-      <div className="card-body p-4 text-center">
+      <div className="card-body p-3 p-md-4 text-center">
         <div className="mb-4">
-          <div className="project-icon d-inline-block p-4 rounded-circle mb-3">
+          <div className="project-icon d-inline-block p-3 p-md-4 rounded-circle mb-3">
             {project.image}
           </div>
         </div>
@@ -37,14 +37,14 @@ function ProjectCard({ project, featured = false }) {
           ))}
         </div>
         
-        <div className={`d-flex ${featured ? 'gap-3 justify-content-center' : 'flex-column gap-2'}`}>
+        <div className={`d-flex ${featured ? 'flex-column flex-sm-row gap-3 justify-content-center' : 'flex-column gap-2'}`}>
           <a 
             href={project.github} 
             className={`btn-github btn ${featured ? 'btn-outline-secondary' : 'btn-outline-secondary btn-sm'} d-flex align-items-center ${featured ? 'gap-2' : 'justify-content-center gap-2'}`}
             target="_blank" 
             rel="noopener noreferrer"
           >
-            <span>📁</span>
+            <span>CODE</span>
             View Code
           </a>
           {project.live && project.live !== '#' && (
@@ -54,7 +54,7 @@ function ProjectCard({ project, featured = false }) {
               target="_blank" 
               rel="noopener noreferrer"
             >
-              <span>🌐</span>
+              <span>LIVE</span>
               Live Demo
             </a>
           )}

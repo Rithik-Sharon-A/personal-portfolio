@@ -11,7 +11,7 @@ function Projects() {
       title: "Portfolio Website",
       description: "A modern, responsive portfolio website showcasing projects, skills, and professional experience with smooth animations.",
       technologies: ["React", "CSS3", "Framer Motion", "Vite"],
-      image: "💼",
+      image: "WEB",
       github: "https://github.com/Rithik-Sharon-A/personal-blog",
       live: "#",
       featured: true
@@ -21,47 +21,14 @@ function Projects() {
       title: "Career Digital Twin",
       description: "Build and deploy your own Agent to represent you to potential future employers. An AI-powered digital representation that showcases your skills and experience.",
       technologies: ["AI/ML", "Python", "OpenAI", "Agent Framework"],
-      image: "🤖",
+      image: "AI",
       github: "https://github.com/Rithik-Sharon-A/career-digital-twin-",
       live: "#",
       featured: true
     }
-    // Uncomment these projects when ready to display them
-    // {
-    //   id: 3,
-    //   title: "SDR Agent",
-    //   description: "An instant business application: create Sales Representatives that craft and send professional emails. Automate your sales outreach with AI-powered agents.",
-    //   technologies: ["AI Agents", "Email Automation", "Sales CRM", "Python"],
-    //   image: "📧",
-    //   github: "#",
-    //   live: "#",
-    //   featured: false
-    // },
-    // {
-    //   id: 4,
-    //   title: "Deep Research Agent",
-    //   description: "Make your own version of the essential Agentic use case: a team of Agents that carry out extensive research on any topic you choose.",
-    //   technologies: ["Multi-Agent Systems", "Research Automation", "Web Scraping", "AI"],
-    //   image: "🔍",
-    //   github: "#",
-    //   live: "#",
-    //   featured: false
-    // },
-    // {
-    //   id: 5,
-    //   title: "Stock Picker Agent",
-    //   description: "Build a Stock Picker Agent in minutes with CrewAI—automate your search for investment gems! AI-powered financial analysis and stock recommendations.",
-    //   technologies: ["CrewAI", "Financial Analysis", "Stock Market", "Python"],
-    //   image: "📈",
-    //   github: "#",
-    //   live: "#",
-    //   featured: false
-    // }
-  ];
+    ];
 
   const featuredProjects = projects.filter(project => project.featured);
-  const otherProjects = projects.filter(project => !project.featured);
-
   return (
     <section 
       id="projects" 
@@ -174,7 +141,7 @@ function Projects() {
                           e.target.style.transform = 'translateY(0)';
                         }}
                       >
-                        <span>📁</span>
+                        <span>CODE</span>
                         Code
                       </a>
                       <a 
@@ -197,7 +164,7 @@ function Projects() {
                           e.target.style.boxShadow = 'none';
                         }}
                       >
-                        <span>🌐</span>
+                        <span>LIVE</span>
                         Live Demo
                       </a>
                     </div>
@@ -209,12 +176,12 @@ function Projects() {
         </div> */}
 
         {/* Call to Action */}
-        <div className="text-center p-5">
+        <div className="text-center p-3 p-md-5">
           <div className="card border-0 shadow" style={{
             background: 'var(--secondary-bg)',
             border: '1px solid rgba(255, 255, 255, 0.1)'
           }}>
-            <div className="card-body p-5">
+            <div className="card-body p-3 p-md-5">
               <p className="fs-5 mb-4" style={{color: 'var(--text-color)', opacity: 0.8, lineHeight: 1.6}}>
                 Interested in seeing more of my work? Check out my GitHub profile for additional projects and contributions.
               </p>

@@ -38,3 +38,15 @@
     transform: translateY(0);
   }
 }
+
+
+/* Responsive typography */
+.section-title {
+  font-size: clamp(1.75rem, 5.5vw, 3rem) !important;
+}
+
+@media (max-width: 576px) {
+  .section-header { margin-bottom: 2.5rem !important; }
+  .section-title { margin-bottom: 1.25rem !important; }
+  .section-subtitle { font-size: 1rem !important; padding: 0 12px; }
+}

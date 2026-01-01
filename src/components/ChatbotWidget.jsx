@@ -1,4 +1,4 @@
-﻿import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import './ChatbotWidget.css';
 
 const ChatbotWidget = () => {
@@ -16,10 +16,10 @@ const ChatbotWidget = () => {
   const messagesEndRef = useRef(null);
 
   const quickQuestions = [
-    { text: 'ðŸ’» Technical Skills', question: 'What are your technical skills?' },
-    { text: 'ðŸ¤– AI Experience', question: 'Tell me about your AI experience' },
-    { text: 'ðŸš€ Projects', question: 'What projects have you built?' },
-    { text: 'ðŸ“§ Contact Info', question: 'How can I contact you?' }
+    { text: 'Technical Skills', question: 'What are your technical skills?' },
+    { text: 'AI Experience', question: 'Tell me about your AI experience' },
+    { text: 'Projects', question: 'What projects have you built?' },
+    { text: 'Contact Info', question: 'How can I contact you?' }
   ];
 
   const scrollToBottom = () => {
@@ -51,8 +51,8 @@ const ChatbotWidget = () => {
 
       const data = await response.json();
       return data.response;
-    } catch (error) {
-      console.error('Python Backend API Error:', error);
+    } catch (_error) {
+      console.error('Python Backend API Error:', _error);
       return getFallbackResponse(userMessage);
     }
   };
@@ -118,7 +118,8 @@ const ChatbotWidget = () => {
         time: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
       };
       setMessages(prev => [...prev, botMessage]);
-    } catch (error) {
+    } catch (_error) {
+      console.error('Chatbot send failed:', _error);
       const errorMessage = {
         text: "I apologize, but I'm having trouble connecting right now. Please try again or contact Rithik directly at rithiksharon.a@gmail.com",
         type: 'bot',
@@ -150,7 +151,7 @@ const ChatbotWidget = () => {
         onClick={() => setIsOpen(!isOpen)}
         aria-label="Toggle chat"
       >
-        {isOpen ? 'âœ•' : 'ðŸ¤–'}
+        {isOpen ? 'X' : 'CHAT'}
       </button>
 
       {/* Chat Window */}
@@ -159,7 +160,7 @@ const ChatbotWidget = () => {
           {/* Header */}
           <div className="chatbot-header">
             <div className="chatbot-header-content">
-              <div className="chatbot-avatar">ðŸ¤–</div>
+              <div className="chatbot-avatar">AI</div>
               <div>
                 <h3>Rithik's AI Twin</h3>
                 <p className="chatbot-status">
@@ -168,14 +169,14 @@ const ChatbotWidget = () => {
                 </p>
               </div>
             </div>
-            <button onClick={() => setIsOpen(false)} className="chatbot-close">âœ•</button>
+            <button onClick={() => setIsOpen(false)} className="chatbot-close">X</button>
           </div>
 
           {/* Messages */}
           <div className="chatbot-messages">
             {messages.map((msg, index) => (
               <div key={index} className={`chatbot-message ${msg.type}`}>
-                <div className="message-avatar">{msg.type === 'user' ? 'ðŸ‘¤' : 'ðŸ¤–'}</div>
+                <div className="message-avatar">{msg.type === 'user' ? 'YOU' : 'AI'}</div>
                 <div className="message-content">
                   <p>{msg.text}</p>
                   <span className="message-time">{msg.time}</span>
@@ -204,7 +205,7 @@ const ChatbotWidget = () => {
             {/* Typing Indicator */}
             {isTyping && (
               <div className="typing-indicator">
-                <div className="message-avatar">ðŸ¤–</div>
+                <div className="message-avatar">AI</div>
                 <div className="typing-dots">
                   <span></span>
                   <span></span>
@@ -227,7 +228,7 @@ const ChatbotWidget = () => {
               disabled={isTyping}
             />
             <button onClick={handleSend} disabled={isTyping || !inputValue.trim()}>
-              âž¤
+              {">"}
             </button>
           </div>
         </div>
@@ -237,5 +238,3 @@ const ChatbotWidget = () => {
 };
 
 export default ChatbotWidget;
-
-

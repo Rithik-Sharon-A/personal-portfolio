@@ -177,3 +177,8 @@ body { overflow-x: hidden; }
 @media (max-width: 576px) {
   .navbar .navbar-brand { font-size: 1.05rem !important; }
 }
+
+
+/* ===== Layout safety (prevent mobile overflow) ===== */
+*, *::before, *::after { box-sizing: border-box; }
+img, svg, video, canvas { max-width: 100%; height: auto; }

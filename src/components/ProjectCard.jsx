@@ -40,21 +40,19 @@ function ProjectCard({ project, featured = false }) {
         <div className={`d-flex ${featured ? 'flex-column flex-sm-row gap-3 justify-content-center' : 'flex-column gap-2'}`}>
           <a 
             href={project.github} 
-            className={`btn-github btn ${featured ? 'btn-outline-secondary' : 'btn-outline-secondary btn-sm'} d-flex align-items-center ${featured ? 'gap-2' : 'justify-content-center gap-2'}`}
+            className={`btn-github btn ${featured ? 'btn-outline-secondary' : 'btn-outline-secondary btn-sm'} d-flex align-items-center justify-content-center`}
             target="_blank" 
             rel="noopener noreferrer"
           >
-            <span>CODE</span>
             View Code
           </a>
           {project.live && project.live !== '#' && (
             <a 
               href={project.live} 
-              className={`btn-live btn ${featured ? '' : 'btn-sm'} d-flex align-items-center ${featured ? 'gap-2' : 'justify-content-center gap-2'}`}
+              className={`btn-live btn ${featured ? '' : 'btn-sm'} d-flex align-items-center justify-content-center`}
               target="_blank" 
               rel="noopener noreferrer"
             >
-              <span>LIVE</span>
               Live Demo
             </a>
           )}

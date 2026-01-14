@@ -129,6 +129,8 @@ button:focus-visible {
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 80px; /* Account for fixed navbar height */
+  width: 100%;
+  overflow-x: hidden;
 }
 
 body {
@@ -138,13 +140,11 @@ body {
   font-family: 'Segoe UI', 'Roboto', 'Arial', sans-serif;
   background: linear-gradient(135deg, var(--background-color) 0%, var(--secondary-bg) 100%);
   color: var(--text-color);
+  overflow-x: hidden;
 }
 
 
 /* ===== Mobile responsiveness helpers ===== */
-
-/* Prevent accidental horizontal scrolling on small screens */
-body { overflow-x: hidden; }
 
 /* Hero section: make typography scale nicely on mobile */
 .hero-section {
@@ -182,3 +182,7 @@ body { overflow-x: hidden; }
 /* ===== Layout safety (prevent mobile overflow) ===== */
 *, *::before, *::after { box-sizing: border-box; }
 img, svg, video, canvas { max-width: 100%; height: auto; }
+
+
+/* ===== navbar overflow containment ===== */
+.navbar.fixed-top { contain: paint; }

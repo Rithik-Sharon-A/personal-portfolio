@@ -25,6 +25,16 @@ function Projects() {
       github: "https://github.com/Rithik-Sharon-A/career-digital-twin-",
       live: "#",
       featured: true
+    },
+    {
+      id: 3,
+      title: "Private Notes Vault",
+      description: "A secure full-stack note-taking application with user authentication and end-to-end data privacy. Users can create, edit, and manage private notes with strict access control enforced through Supabase Row Level Security policies.",
+      technologies: ["JavaScript", "HTML/CSS", "Supabase", "OAuth 2.0", "RLS"],
+      image: "Notes",
+      github: "https://github.com/Rithik-Sharon-A/Private-Notes",
+      live: "https://private-notes-vault1.netlify.app/",
+      featured: true
     }
     ];
 

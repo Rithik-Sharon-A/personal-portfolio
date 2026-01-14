@@ -206,28 +206,35 @@ function Footer() {
           className="btn btn-primary rounded-circle d-flex align-items-center justify-content-center position-fixed"
           style={{
             bottom: '30px',
-            left: '30px',
-            width: '50px',
-            height: '50px',
-            background: 'linear-gradient(135deg, var(--accent-color), #ff6b6b)',
+            left: '5px',
+            width: '52px',
+            height: '52px',
+            background: 'transparent',
             border: 'none',
-            boxShadow: '0 4px 15px rgba(124, 58, 237, 0.4)',
+            boxShadow: 'none',
             zIndex: 997,
             transition: 'all 0.3s ease',
-            fontSize: '1.5rem'
+            fontSize: '1.55rem',
+            fontWeight: 700,
+            color: 'transparent',
+            backgroundImage: 'linear-gradient(135deg, #c7b8ff, #8f7cff, #ff7ac3)',
+            WebkitBackgroundClip: 'text',
+            backgroundClip: 'text',
+            WebkitTextFillColor: 'transparent',
+            textShadow: '0 3px 10px rgba(0,0,0,0.7)'
           }}
           onMouseEnter={(e) => {
             e.target.style.transform = 'translateY(-5px)';
-            e.target.style.boxShadow = '0 6px 20px rgba(124, 58, 237, 0.6)';
+            e.target.style.textShadow = '0 4px 14px rgba(0,0,0,0.8)';
           }}
           onMouseLeave={(e) => {
             e.target.style.transform = 'translateY(0)';
-            e.target.style.boxShadow = '0 4px 15px rgba(124, 58, 237, 0.4)';
+            e.target.style.textShadow = '0 3px 10px rgba(0,0,0,0.7)';
           }}
           title="Back to top"
           aria-label="Back to top"
         >
-          ⬆️
+          ⇧
         </button>
       )}
     </>

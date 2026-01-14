@@ -1,7 +1,6 @@
 // src/HeroSection.jsx
 
 import React from 'react';
-import bgImage from './assets/bg.png';
 
 function HeroSection() {
   const handleResumeDownload = async () => {
@@ -29,23 +28,11 @@ function HeroSection() {
     <section 
       id="home" 
       className="hero-section d-flex justify-content-center align-items-center text-center text-white position-relative"
-      style={{
-        backgroundImage: `url(${bgImage})`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat'
-      }}
     >
-      {/* Overlay for text readability */}
-      <div className="position-absolute top-0 start-0 w-100 h-100" style={{backgroundColor: 'rgba(0, 0, 0, 0.5)'}}></div>
-      
       {/* Hero Content */}
-      <div className="position-relative hero-content" style={{zIndex: 10}}>
-        <h1 className="display-1 fw-light mb-0 hero-name hero-name--light">
-          RITHIK
-        </h1>
-        <h1 className="display-1 fw-bold mb-0 hero-name hero-name--bold">
-          SHARON A
+      <div className="position-relative hero-content">
+        <h1 className="display-1 fw-bold mb-0 hero-name">
+          RITHIK SHARON A
         </h1>
         <p className="fs-3 fw-light mt-3 hero-role">
           MERN Stack Developer

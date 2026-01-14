@@ -151,7 +151,7 @@ const ChatbotWidget = () => {
         onClick={() => setIsOpen(!isOpen)}
         aria-label="Toggle chat"
       >
-        {isOpen ? 'X' : 'CHAT'}
+        {isOpen ? '×' : 'Chat'}
       </button>
 
       {/* Chat Window */}

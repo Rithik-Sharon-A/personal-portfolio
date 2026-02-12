@@ -2,16 +2,16 @@
 @import 'bootstrap/dist/css/bootstrap.min.css';
 
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  line-height: 1.6;
   font-weight: 400;
 
-  /* Dark Purple Theme CSS Variables */
-  --background-color: #0f0f23;
-  --text-color: #e0e0e0;
-  --secondary-bg: #1a1a2e;
-  --accent-color: #7c3aed;
-  --navbar-bg: linear-gradient(135deg, rgba(15, 15, 35, 0.95) 0%, rgba(26, 26, 46, 0.95) 100%);
+  /* Strict Monochrome Palette */
+  --background-color: #000000;
+  --text-color: #ffffff;
+  --text-muted: #b5b5b5;
+  --border-color: #1a1a1a;
+  --card-bg: #0a0a0a;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -42,13 +42,11 @@
 /* Mobile Navigation Styles */
 @media (max-width: 991.98px) {
   .navbar-collapse {
-    background: rgba(15, 15, 35, 0.95);
-    backdrop-filter: blur(20px);
-    border-radius: 12px;
-    margin-top: 8px;
+    background: #000000;
+    border-radius: 8px;
+    margin-top: 12px;
     padding: 16px;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid #1a1a1a;
   }
   
   .navbar-nav {
@@ -63,12 +61,13 @@
     padding: 12px 16px !important;
     border-radius: 8px;
     font-weight: 500;
-    transition: all 0.3s ease;
+    transition: all 0.2s ease;
+    color: #ffffff !important;
   }
   
   .nav-link:hover {
-    background-color: rgba(100, 108, 255, 0.1) !important;
-    color: var(--accent-color) !important;
+    background-color: #1a1a1a !important;
+    color: #ffffff !important;
   }
 }
 
@@ -89,38 +88,45 @@ a {
   font-weight: 500;
   color: var(--text-color);
   text-decoration: inherit;
-  transition: color 0.3s ease;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 a:hover {
-  color: #646cff;
+  color: var(--accent-color);
 }
-
-
 
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+}
+
+h2, h3 {
+  font-weight: 700;
+  letter-spacing: -0.02em;
 }
 
 button {
   border-radius: 8px;
-  border: 1px solid transparent;
+  border: 1px solid #ffffff;
   padding: 0.6em 1.2em;
   font-size: 1em;
-  font-weight: 500;
+  font-weight: 600;
   font-family: inherit;
-  background-color: var(--background-color);
-  color: var(--text-color);
+  background: transparent;
+  color: #ffffff;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 0.2s ease;
 }
 button:hover {
-  border-color: #646cff;
-  background-color: rgba(100, 108, 255, 0.1);
+  background: #ffffff;
+  color: #000000;
+  border-color: #ffffff;
 }
 button:focus,
 button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  outline: 2px solid #ffffff;
+  outline-offset: 2px;
 }
 
 /* Remove media query - let Redux handle theme switching */
@@ -137,10 +143,66 @@ body {
   margin: 0;
   padding: 0;
   min-height: 100vh;
-  font-family: 'Segoe UI', 'Roboto', 'Arial', sans-serif;
-  background: linear-gradient(135deg, var(--background-color) 0%, var(--secondary-bg) 100%);
-  color: var(--text-color);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: #000000 !important;
+  color: #ffffff;
   overflow-x: hidden;
+}
+
+/* Remove background textures */
+body::before {
+  display: none;
+}
+
+/* Force black background on all containers */
+#root, main, .container, .row, .col {
+  background: transparent !important;
+}
+
+/* Monochrome cards - no blur, no glow */
+.card, .project-card, .skill-card, .work-card {
+  background: #0a0a0a !important;
+  border: 1px solid #1a1a1a !important;
+  border-radius: 12px !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  box-shadow: none !important;
+}
+
+/* Remove all backgrounds globally */
+* {
+  background-color: transparent;
+}
+
+/* Section containers */
+.skills-section, .skills-section div,
+.about-section, .about-section div,
+.projects-section, .projects-section div {
+  background: transparent !important;
+}
+
+/* Override Bootstrap cards */
+.card-body {
+  background: transparent !important;
+}
+
+/* Monochrome text */
+h1, h2, h3, h4, h5, h6 {
+  color: #ffffff !important;
+  background: none !important;
+  -webkit-text-fill-color: #ffffff !important;
+}
+
+p, span, label {
+  color: #bdbdbd !important;
+}
+
+a {
+  color: #ffffff !important;
+}
+
+a:hover {
+  color: #bdbdbd !important;
 }
 
 

@@ -9,7 +9,9 @@ function SkillCard({ title, skills }) {
   return (
     <div className="skill-card card mb-4 border-0 shadow">
       <div className="card-body p-4">
-        <h4 className="h5 fw-semibold mb-3" style={{color: 'var(--accent-color)'}}>
+        <h4 className="h5 fw-semibold mb-3" style={{
+          color: '#ffffff'
+        }}>
           {title}
         </h4>
         <div className="d-flex flex-wrap gap-2">

@@ -1,18 +1,21 @@
-/* src/components/SkillBadge.css */
+/* src/components/SkillBadge.css - Glowing White Pills */
 
 .skill-badge {
-  background: rgba(124, 58, 237, 0.15);
-  color: var(--accent-color);
+  background: #0a0a0a !important;
+  color: #ffffff !important;
   font-weight: 600;
-  border: 1.5px solid rgba(124, 58, 237, 0.3);
+  font-size: 0.875rem;
+  border: 1px solid #ffffff !important;
+  border-radius: 20px;
+  padding: 0.5rem 1rem;
   transition: all 0.3s ease;
   cursor: default;
 }
 
 .skill-badge:hover {
-  background: rgba(124, 58, 237, 0.25);
-  color: var(--accent-color);
-  border-color: var(--accent-color);
+  background: #ffffff !important;
+  color: #000000 !important;
+  border-color: #ffffff !important;
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(124, 58, 237, 0.3);
+  box-shadow: 0 0 20px rgba(255,255,255,0.25);
 }

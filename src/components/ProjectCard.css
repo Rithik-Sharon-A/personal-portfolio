@@ -1,27 +1,33 @@
-/* src/components/ProjectCard.css */
+/* src/components/ProjectCard.css - Glowing White Minimal Cards */
 
 .project-card {
-  background: linear-gradient(135deg, var(--background-color) 0%, var(--secondary-bg) 100%);
-  backdrop-filter: blur(10px);
-  border: 2px solid rgba(124, 58, 237, 0.3) !important;
-  box-shadow: 0 15px 45px rgba(124, 58, 237, 0.2);
+  background: #0a0a0a !important;
+  border: 1px solid #1a1a1a !important;
+  border-radius: 14px !important;
   transition: all 0.3s ease;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+
+.project-card::before {
+  display: none;
 }
 
 .project-card:hover {
-  transform: translateY(-3px);
-  border-color: rgba(124, 58, 237, 0.5) !important;
-  box-shadow: 0 15px 45px rgba(124, 58, 237, 0.3);
+  transform: translateY(-4px);
+  border-color: #ffffff !important;
+  box-shadow: 0 0 40px rgba(255,255,255,0.15) !important;
 }
 
 .featured-indicator {
-  height: 4px;
-  background: linear-gradient(135deg, var(--accent-color), #ff6b6b);
+  height: 2px;
+  background: #ffffff;
 }
 
 .project-icon {
   font-size: 3rem;
-  background: linear-gradient(135deg, var(--accent-color), #ff6b6b);
+  color: #ffffff !important;
 }
 
 .project-card:not(.featured) .project-icon {
@@ -29,37 +35,52 @@
 }
 
 .tech-badge {
-  background: rgba(124, 58, 237, 0.15);
-  color: var(--accent-color);
-  border: 1px solid rgba(124, 58, 237, 0.3);
-  transition: all 0.3s ease;
+  background: transparent !important;
+  color: #b5b5b5 !important;
+  border: 1px solid #ffffff !important;
+  transition: all 0.2s ease;
+  font-size: 0.85rem;
+  padding: 0.35rem 0.75rem;
+  border-radius: 20px;
 }
 
 .tech-badge:hover {
-  background: rgba(124, 58, 237, 0.25);
-  color: var(--accent-color);
-  border-color: var(--accent-color);
-  transform: scale(1.05);
+  background: #ffffff !important;
+  color: #000000 !important;
+  border-color: #ffffff !important;
+  transform: translateY(-1px);
 }
 
 .btn-github {
+  background: transparent !important;
+  border: 1px solid #ffffff !important;
+  color: #ffffff !important;
   transition: all 0.3s ease;
+  padding: 0.5rem 1.25rem;
+  border-radius: 8px;
 }
 
 .btn-github:hover {
-  background: #333 !important;
-  color: white !important;
+  background: #ffffff !important;
+  color: #000000 !important;
+  border-color: #ffffff !important;
   transform: translateY(-2px);
+  box-shadow: 0 0 25px rgba(255,255,255,0.3);
 }
 
 .btn-live {
-  background: linear-gradient(135deg, var(--accent-color), #ff6b6b);
-  color: white;
-  border: 1px solid var(--accent-color);
+  background: transparent !important;
+  color: #ffffff !important;
+  border: 1px solid #ffffff !important;
   transition: all 0.3s ease;
+  padding: 0.5rem 1.25rem;
+  border-radius: 8px;
 }
 
 .btn-live:hover {
+  background: #ffffff !important;
+  color: #000000 !important;
+  border-color: #ffffff !important;
   transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(100, 108, 255, 0.3);
+  box-shadow: 0 0 25px rgba(255,255,255,0.3);
 }

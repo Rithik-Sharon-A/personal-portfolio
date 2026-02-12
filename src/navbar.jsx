@@ -14,10 +14,8 @@ function Navbar() {
 
   return (
     <nav className="navbar navbar-expand-lg fixed-top" style={{
-      background: 'var(--navbar-bg)',
-      backdropFilter: 'blur(20px)',
-      borderBottom: '1px solid rgba(124, 58, 237, 0.1)',
-      boxShadow: '0 2px 20px rgba(0, 0, 0, 0.1)',
+      background: '#000000',
+      borderBottom: '1px solid #1a1a1a',
       zIndex: 999
     }}>
       <div className="container">
@@ -27,14 +25,14 @@ function Navbar() {
                style={{
                  width: '32px',
                  height: '32px',
-                 background: 'linear-gradient(135deg, var(--accent-color), #ff6b6b)',
-                 boxShadow: '0 2px 8px rgba(124, 58, 237, 0.3)'
+                 background: '#ffffff',
+                 color: '#000000',
+                 fontSize: '0.85rem',
+                 fontWeight: 'bold'
                }}>RS</div>
           <span style={{
-            background: 'linear-gradient(135deg, var(--accent-color), #ff6b6b)',
-            WebkitBackgroundClip: 'text',
-            WebkitTextFillColor: 'transparent',
-            backgroundClip: 'text'
+            color: '#ffffff',
+            fontWeight: 'bold'
           }}>
             My Digital Space
           </span>
@@ -54,10 +52,10 @@ function Navbar() {
             border: 'none',
             padding: '4px 8px',
             borderRadius: '8px',
-            transition: 'all 0.3s ease'
+            transition: 'all 0.2s ease'
           }}
           onMouseEnter={(e) => {
-            e.target.style.background = 'rgba(100, 108, 255, 0.1)';
+            e.target.style.background = '#1a1a1a';
           }}
           onMouseLeave={(e) => {
             e.target.style.background = 'transparent';
@@ -122,18 +120,17 @@ function Navbar() {
                   href={link.href} 
                   className="nav-link text-decoration-none px-3 py-2 rounded"
                   style={{
-                    color: 'var(--text-color)', 
+                    color: '#ffffff', 
                     transition: 'all 0.3s ease',
                     fontSize: '1rem',
-                    fontWeight: '500'
+                    fontWeight: '500',
+                    borderBottom: '2px solid transparent'
                   }}
                   onMouseEnter={(e) => {
-                    e.target.style.color = 'var(--accent-color)';
-                    e.target.style.backgroundColor = 'rgba(100, 108, 255, 0.1)';
+                    e.target.style.borderBottom = '2px solid #ffffff';
                   }}
                   onMouseLeave={(e) => {
-                    e.target.style.color = 'var(--text-color)';
-                    e.target.style.backgroundColor = 'transparent';
+                    e.target.style.borderBottom = '2px solid transparent';
                   }}
                 >
                   {link.label}

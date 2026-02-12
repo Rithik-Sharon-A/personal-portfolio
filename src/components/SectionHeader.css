@@ -1,11 +1,16 @@
-/* src/components/SectionHeader.css */
+/* src/components/SectionHeader.css - Monochrome Section Headers */
 
 .section-header {
-  animation: fadeIn 0.6s ease-in;
+  animation: fadeIn 0.4s ease;
 }
 
 .section-title {
-  color: var(--text-color);
+  color: #ffffff !important;
+  background: none !important;
+  -webkit-text-fill-color: #ffffff !important;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  filter: none !important;
 }
 
 .section-header.text-center .section-underline {
@@ -20,18 +25,21 @@
 }
 
 .section-underline {
-  height: 4px;
-  background: linear-gradient(90deg, var(--accent-color), #4285f4);
+  height: 2px;
+  background: #ffffff;
+  border-radius: 0;
 }
 
 .section-subtitle {
-  max-width: 600px;
+  max-width: 700px;
+  color: #b5b5b5 !important;
+  line-height: 1.7;
 }
 
 @keyframes fadeIn {
   from {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(10px);
   }
   to {
     opacity: 1;
@@ -39,14 +47,23 @@
   }
 }
 
-
 /* Responsive typography */
 .section-title {
-  font-size: clamp(1.75rem, 5.5vw, 3rem) !important;
+  font-size: clamp(1.875rem, 5vw, 2.75rem) !important;
 }
 
 @media (max-width: 576px) {
-  .section-header { margin-bottom: 2.5rem !important; }
-  .section-title { margin-bottom: 1.25rem !important; }
-  .section-subtitle { font-size: 1rem !important; padding: 0 12px; }
+  .section-header { 
+    margin-bottom: 2.5rem !important; 
+  }
+  .section-title { 
+    margin-bottom: 1.25rem !important; 
+  }
+  .section-subtitle { 
+    font-size: 0.95rem !important; 
+    padding: 0 12px; 
+  }
+  .section-underline {
+    width: 45px;
+  }
 }

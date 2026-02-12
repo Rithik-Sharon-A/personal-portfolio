@@ -19,10 +19,12 @@ function ProjectCard({ project, featured = false }) {
           </div>
         </div>
         
-        <h4 className={`fw-semibold mb-3 ${featured ? 'h4' : 'h5'}`} style={{color: 'var(--text-color)'}}>
+        <h4 className={`fw-semibold mb-3 ${featured ? 'h4' : 'h5'}`} style={{
+          color: '#ffffff'
+        }}>
           {project.title}
         </h4>
-        <p className={`mb-4 ${featured ? '' : 'small'}`} style={{color: 'var(--text-color)', opacity: 0.8, lineHeight: 1.6}}>
+        <p className={`mb-4 ${featured ? '' : 'small'}`} style={{color: '#bdbdbd', lineHeight: 1.6}}>
           {project.description}
         </p>
         

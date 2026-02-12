@@ -44,7 +44,7 @@ function Projects() {
       id="projects" 
       className="py-5"
       style={{
-        background: 'linear-gradient(135deg, var(--secondary-bg) 0%, var(--background-color) 100%)',
+        background: '#000000',
         minHeight: '100vh'
       }}
     >
@@ -58,12 +58,14 @@ function Projects() {
 
         {/* Featured Projects */}
         <div className="mb-5">
-          <h3 className="h2 fw-semibold text-center mb-5 position-relative" style={{color: 'var(--text-color)'}}>
+          <h3 className="h2 fw-semibold text-center mb-5 position-relative" style={{
+            color: '#ffffff'
+          }}>
             Featured Projects
-            <span className="position-absolute bottom-0 start-50 translate-middle-x rounded" style={{
+            <span className="position-absolute bottom-0 start-50 translate-middle-x" style={{
               width: '60px',
-              height: '3px',
-              background: 'linear-gradient(135deg, var(--accent-color), #ff6b6b)'
+              height: '2px',
+              background: '#ffffff'
             }}></span>
           </h3>
           <div className="row g-4 mb-5">
@@ -187,12 +189,13 @@ function Projects() {
 
         {/* Call to Action */}
         <div className="text-center p-3 p-md-5">
-          <div className="card border-0 shadow" style={{
-            background: 'var(--secondary-bg)',
-            border: '1px solid rgba(255, 255, 255, 0.1)'
+          <div className="card border-0" style={{
+            background: '#0a0a0a',
+            border: '1px solid #1a1a1a',
+            borderRadius: '12px'
           }}>
             <div className="card-body p-3 p-md-5">
-              <p className="fs-5 mb-4" style={{color: 'var(--text-color)', opacity: 0.8, lineHeight: 1.6}}>
+              <p className="fs-5 mb-4" style={{color: '#bdbdbd', lineHeight: 1.6}}>
                 Interested in seeing more of my work? Check out my GitHub profile for additional projects and contributions.
               </p>
               <a 
@@ -201,20 +204,23 @@ function Projects() {
                 target="_blank" 
                 rel="noopener noreferrer"
                 style={{
-                  background: 'linear-gradient(135deg, var(--accent-color), #ff6b6b)',
-                  color: 'white',
-                  border: 'none',
-                  borderRadius: '50px',
-                  padding: '15px 30px',
+                  background: 'transparent',
+                  color: '#ffffff',
+                  border: '1px solid #ffffff',
+                  borderRadius: '8px',
+                  padding: '14px 32px',
                   fontWeight: '600',
-                  transition: 'all 0.3s ease'
+                  transition: 'all 0.3s ease',
+                  textDecoration: 'none'
                 }}
                 onMouseEnter={(e) => {
-                  e.target.style.transform = 'translateY(-3px)';
-                  e.target.style.boxShadow = '0 10px 25px rgba(100, 108, 255, 0.3)';
+                  e.target.style.background = '#ffffff';
+                  e.target.style.color = '#000000';
+                  e.target.style.boxShadow = '0 0 25px rgba(255,255,255,0.3)';
                 }}
                 onMouseLeave={(e) => {
-                  e.target.style.transform = 'translateY(0)';
+                  e.target.style.background = 'transparent';
+                  e.target.style.color = '#ffffff';
                   e.target.style.boxShadow = 'none';
                 }}
               >

@@ -1,15 +1,21 @@
-/* src/components/SkillCard.css */
+/* src/components/SkillCard.css - Glowing White Minimal Cards */
 
 .skill-card {
-  background: linear-gradient(135deg, var(--background-color) 0%, var(--secondary-bg) 100%);
-  backdrop-filter: blur(10px);
-  border: 2px solid rgba(124, 58, 237, 0.3) !important;
-  box-shadow: 0 15px 35px rgba(124, 58, 237, 0.2);
+  background: #0a0a0a !important;
+  border: 1px solid #1a1a1a !important;
+  border-radius: 14px !important;
   transition: all 0.3s ease;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+
+.skill-card::before {
+  display: none;
 }
 
 .skill-card:hover {
-  transform: translateY(-2px);
-  border-color: rgba(124, 58, 237, 0.5) !important;
-  box-shadow: 0 15px 35px rgba(124, 58, 237, 0.3);
+  transform: translateY(-4px);
+  border-color: #ffffff !important;
+  box-shadow: 0 0 40px rgba(255,255,255,0.15) !important;
 }

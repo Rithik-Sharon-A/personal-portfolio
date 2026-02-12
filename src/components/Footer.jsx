@@ -1,23 +1,8 @@
 // src/components/Footer.jsx
 
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 
 function Footer() {
-  const [showBackToTop, setShowBackToTop] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setShowBackToTop(window.scrollY > 300);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
-
   const currentYear = new Date().getFullYear();
 
   return (
@@ -25,9 +10,9 @@ function Footer() {
       <footer 
         className="py-5 position-relative"
         style={{
-          background: 'linear-gradient(135deg, var(--secondary-bg) 0%, var(--background-color) 100%)',
-          borderTop: '1px solid rgba(124, 58, 237, 0.2)',
-          color: 'var(--text-color)'
+          background: '#000000',
+          borderTop: '1px solid #1a1a1a',
+          color: '#ffffff'
         }}
       >
         <div className="container">
@@ -39,22 +24,19 @@ function Footer() {
                      style={{
                        width: '40px',
                        height: '40px',
-                       background: 'linear-gradient(135deg, var(--accent-color), #ff6b6b)',
-                       boxShadow: '0 2px 8px rgba(124, 58, 237, 0.3)'
+                       background: '#ffffff',
+                       color: '#000000'
                      }}>
                   💻
                 </div>
                 <span className="h5 mb-0" style={{
-                  background: 'linear-gradient(135deg, var(--accent-color), #ff6b6b)',
-                  WebkitBackgroundClip: 'text',
-                  WebkitTextFillColor: 'transparent',
-                  backgroundClip: 'text',
+                  color: '#ffffff',
                   fontWeight: 'bold'
                 }}>
                   Rithik Sharon A
                 </span>
               </div>
-              <p style={{ color: 'var(--text-color)', opacity: 0.8, lineHeight: 1.6 }}>
+              <p style={{ color: '#bdbdbd', lineHeight: 1.6 }}>
                 MERN Stack Developer specializing in Agentic AI and OpenAI APIs to build 
                 scalable, responsive web applications.
               </p>
@@ -62,7 +44,7 @@ function Footer() {
 
             {/* Quick Links */}
             <div className="col-lg-4 col-md-6">
-              <h5 className="mb-3" style={{ color: 'var(--text-color)', fontWeight: '600' }}>
+              <h5 className="mb-3" style={{ color: '#ffffff', fontWeight: '600' }}>
                 Quick Links
               </h5>
               <ul className="list-unstyled">
@@ -72,19 +54,16 @@ function Footer() {
                       href={`#${item.toLowerCase()}`}
                       className="text-decoration-none"
                       style={{
-                        color: 'var(--text-color)',
-                        opacity: 0.8,
+                        color: '#bdbdbd',
                         transition: 'all 0.3s ease',
                         display: 'inline-block'
                       }}
                       onMouseEnter={(e) => {
-                        e.target.style.color = 'var(--accent-color)';
-                        e.target.style.opacity = '1';
+                        e.target.style.color = '#ffffff';
                         e.target.style.transform = 'translateX(5px)';
                       }}
                       onMouseLeave={(e) => {
-                        e.target.style.color = 'var(--text-color)';
-                        e.target.style.opacity = '0.8';
+                        e.target.style.color = '#bdbdbd';
                         e.target.style.transform = 'translateX(0)';
                       }}
                     >
@@ -97,7 +76,7 @@ function Footer() {
 
             {/* Connect Section */}
             <div className="col-lg-4 col-md-6">
-              <h5 className="mb-3" style={{ color: 'var(--text-color)', fontWeight: '600' }}>
+              <h5 className="mb-3" style={{ color: '#ffffff', fontWeight: '600' }}>
                 Connect
               </h5>
               <div className="d-flex flex-wrap gap-3">
@@ -109,19 +88,19 @@ function Footer() {
                   style={{
                     width: '45px',
                     height: '45px',
-                    background: 'rgba(124, 58, 237, 0.1)',
-                    border: '1px solid rgba(124, 58, 237, 0.3)',
+                    background: 'transparent',
+                    border: '1px solid #ffffff',
                     fontSize: '1.3rem',
                     transition: 'all 0.3s ease',
                     textDecoration: 'none'
                   }}
                   onMouseEnter={(e) => {
-                    e.target.style.background = 'var(--accent-color)';
+                    e.target.style.background = '#ffffff';
                     e.target.style.transform = 'translateY(-3px)';
-                    e.target.style.boxShadow = '0 5px 15px rgba(124, 58, 237, 0.4)';
+                    e.target.style.boxShadow = '0 0 25px rgba(255,255,255,0.3)';
                   }}
                   onMouseLeave={(e) => {
-                    e.target.style.background = 'rgba(124, 58, 237, 0.1)';
+                    e.target.style.background = 'transparent';
                     e.target.style.transform = 'translateY(0)';
                     e.target.style.boxShadow = 'none';
                   }}
@@ -137,19 +116,19 @@ function Footer() {
                   style={{
                     width: '45px',
                     height: '45px',
-                    background: 'rgba(124, 58, 237, 0.1)',
-                    border: '1px solid rgba(124, 58, 237, 0.3)',
+                    background: 'transparent',
+                    border: '1px solid #ffffff',
                     fontSize: '1.3rem',
                     transition: 'all 0.3s ease',
                     textDecoration: 'none'
                   }}
                   onMouseEnter={(e) => {
-                    e.target.style.background = 'var(--accent-color)';
+                    e.target.style.background = '#ffffff';
                     e.target.style.transform = 'translateY(-3px)';
-                    e.target.style.boxShadow = '0 5px 15px rgba(124, 58, 237, 0.4)';
+                    e.target.style.boxShadow = '0 0 25px rgba(255,255,255,0.3)';
                   }}
                   onMouseLeave={(e) => {
-                    e.target.style.background = 'rgba(124, 58, 237, 0.1)';
+                    e.target.style.background = 'transparent';
                     e.target.style.transform = 'translateY(0)';
                     e.target.style.boxShadow = 'none';
                   }}
@@ -163,19 +142,19 @@ function Footer() {
                   style={{
                     width: '45px',
                     height: '45px',
-                    background: 'rgba(124, 58, 237, 0.1)',
-                    border: '1px solid rgba(124, 58, 237, 0.3)',
+                    background: 'transparent',
+                    border: '1px solid #ffffff',
                     fontSize: '1.3rem',
                     transition: 'all 0.3s ease',
                     textDecoration: 'none'
                   }}
                   onMouseEnter={(e) => {
-                    e.target.style.background = 'var(--accent-color)';
+                    e.target.style.background = '#ffffff';
                     e.target.style.transform = 'translateY(-3px)';
-                    e.target.style.boxShadow = '0 5px 15px rgba(124, 58, 237, 0.4)';
+                    e.target.style.boxShadow = '0 0 25px rgba(255,255,255,0.3)';
                   }}
                   onMouseLeave={(e) => {
-                    e.target.style.background = 'rgba(124, 58, 237, 0.1)';
+                    e.target.style.background = 'transparent';
                     e.target.style.transform = 'translateY(0)';
                     e.target.style.boxShadow = 'none';
                   }}
@@ -188,55 +167,17 @@ function Footer() {
           </div>
 
           {/* Copyright */}
-          <div className="text-center mt-5 pt-4" style={{ borderTop: '1px solid rgba(124, 58, 237, 0.1)' }}>
-            <p className="mb-0" style={{ color: 'var(--text-color)', opacity: 0.7 }}>
+          <div className="text-center mt-5 pt-4" style={{ borderTop: '1px solid #1a1a1a' }}>
+            <p className="mb-0" style={{ color: '#bdbdbd' }}>
               © {currentYear} Rithik Sharon A. All rights reserved.
             </p>
-            <p className="mb-0 mt-2" style={{ color: 'var(--text-color)', opacity: 0.6, fontSize: '0.9rem' }}>
+            <p className="mb-0 mt-2" style={{ color: '#bdbdbd', fontSize: '0.9rem' }}>
               Built with React, Vite & Bootstrap
             </p>
           </div>
         </div>
       </footer>
 
-      {/* Back to Top Button */}
-      {showBackToTop && (
-        <button
-          onClick={scrollToTop}
-          className="btn btn-primary rounded-circle d-flex align-items-center justify-content-center position-fixed"
-          style={{
-            bottom: '30px',
-            left: '5px',
-            width: '52px',
-            height: '52px',
-            background: 'transparent',
-            border: 'none',
-            boxShadow: 'none',
-            zIndex: 997,
-            transition: 'all 0.3s ease',
-            fontSize: '1.55rem',
-            fontWeight: 700,
-            color: 'transparent',
-            backgroundImage: 'linear-gradient(135deg, #c7b8ff, #8f7cff, #ff7ac3)',
-            WebkitBackgroundClip: 'text',
-            backgroundClip: 'text',
-            WebkitTextFillColor: 'transparent',
-            textShadow: '0 3px 10px rgba(0,0,0,0.7)'
-          }}
-          onMouseEnter={(e) => {
-            e.target.style.transform = 'translateY(-5px)';
-            e.target.style.textShadow = '0 4px 14px rgba(0,0,0,0.8)';
-          }}
-          onMouseLeave={(e) => {
-            e.target.style.transform = 'translateY(0)';
-            e.target.style.textShadow = '0 3px 10px rgba(0,0,0,0.7)';
-          }}
-          title="Back to top"
-          aria-label="Back to top"
-        >
-          ⇧
-        </button>
-      )}
     </>
   );
 }

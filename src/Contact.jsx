@@ -65,7 +65,7 @@ function Contact() {
       className="contact-section py-5"
       style={{
         minHeight: '100vh',
-        background: 'linear-gradient(135deg, var(--background-color) 0%, var(--secondary-bg) 100%)',
+        background: '#000000',
       }}
     >
       <div className="container">
@@ -78,13 +78,13 @@ function Contact() {
         <div className="row justify-content-center">
           <div className="col-lg-8">
             <div className="card border-0 shadow" style={{
-              background: 'var(--secondary-bg)',
-              border: '1px solid rgba(100, 108, 255, 0.1)'
+              background: '#0a0a0a',
+              border: '1px solid #1a1a1a'
             }}>
               <div className="card-body p-5">
                 <form onSubmit={handleSubmit}>
                   <div className="mb-4">
-                    <label htmlFor="name" className="form-label" style={{color: 'var(--text-color)'}}>
+                    <label htmlFor="name" className="form-label" style={{color: '#ffffff'}}>
                       Name
                     </label>
                     <input
@@ -100,7 +100,7 @@ function Contact() {
                   </div>
 
                   <div className="mb-4">
-                    <label htmlFor="email" className="form-label" style={{color: 'var(--text-color)'}}>
+                    <label htmlFor="email" className="form-label" style={{color: '#ffffff'}}>
                       Email
                     </label>
                     <input
@@ -116,7 +116,7 @@ function Contact() {
                   </div>
 
                   <div className="mb-4">
-                    <label htmlFor="message" className="form-label" style={{color: 'var(--text-color)'}}>
+                    <label htmlFor="message" className="form-label" style={{color: '#ffffff'}}>
                       Message
                     </label>
                     <textarea
@@ -159,8 +159,8 @@ function Contact() {
               <div className="col-md-4">
                 <div className="text-center contact-info-card">
                   <div className="contact-icon mb-3">@</div>
-                  <h5 style={{color: 'var(--text-color)'}}>Email</h5>
-                  <a href="mailto:rithiksharon.a@gmail.com" style={{color: 'var(--accent-color)', textDecoration: 'none'}}>
+                  <h5 style={{color: '#ffffff'}}>Email</h5>
+                  <a href="mailto:rithiksharon.a@gmail.com" style={{color: '#ffffff', textDecoration: 'none'}}>
                   rithiksharon.a@gmail.com
                   </a>
                 </div>
@@ -168,8 +168,8 @@ function Contact() {
               <div className="col-md-4">
                 <div className="text-center contact-info-card">
                   <div className="contact-icon mb-3">in</div>
-                  <h5 style={{color: 'var(--text-color)'}}>LinkedIn</h5>
-                  <a href="https://www.linkedin.com/in/rithik-sharon/" target="_blank" rel="noopener noreferrer" style={{color: 'var(--accent-color)', textDecoration: 'none'}}>
+                  <h5 style={{color: '#ffffff'}}>LinkedIn</h5>
+                  <a href="https://www.linkedin.com/in/rithik-sharon/" target="_blank" rel="noopener noreferrer" style={{color: '#ffffff', textDecoration: 'none'}}>
                     Rithik Sharon A
                   </a>
                 </div>
@@ -177,8 +177,8 @@ function Contact() {
               <div className="col-md-4">
                 <div className="text-center contact-info-card">
                   <div className="contact-icon mb-3">{'<>'}</div>
-                  <h5 style={{color: 'var(--text-color)'}}>GitHub</h5>
-                  <a href="https://github.com/Rithik-Sharon-A" target="_blank" rel="noopener noreferrer" style={{color: 'var(--accent-color)', textDecoration: 'none'}}>
+                  <h5 style={{color: '#ffffff'}}>GitHub</h5>
+                  <a href="https://github.com/Rithik-Sharon-A" target="_blank" rel="noopener noreferrer" style={{color: '#ffffff', textDecoration: 'none'}}>
                     @Rithik-Sharon-A
                   </a>
                 </div>

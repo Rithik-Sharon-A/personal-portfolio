@@ -1,6 +1,12 @@
-/* App.css - Dark theme styles */
+/* App.css - Monochrome Minimal Theme */
 .dark {
-  background: linear-gradient(135deg, var(--background-color) 0%, var(--secondary-bg) 100%);
-  color: var(--text-color);
+  background: #000000;
+  color: #ffffff;
+}
+
+/* Ensure all sections have proper z-index */
+section {
+  position: relative;
+  z-index: 1;
 }
 

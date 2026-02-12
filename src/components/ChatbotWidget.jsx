@@ -31,11 +31,11 @@ const ChatbotWidget = () => {
   }, [messages]);
 
   const getAIResponse = async (userMessage) => {
-    // Get API URL from environment or use default
-    const apiUrl = import.meta.env.VITE_API_URL || 'https://career-digital-twin.onrender.com';
+    // Normalize API base to avoid trailing slash issues (prevents //api/chat)
+    const apiBase = (import.meta.env.VITE_API_URL || 'https://new-twin.onrender.com').replace(/\/+$/, '');
     
     try {
-      const response = await fetch(`${apiUrl}/api/chat`, {
+      const response = await fetch(`${apiBase}/api/chat`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
